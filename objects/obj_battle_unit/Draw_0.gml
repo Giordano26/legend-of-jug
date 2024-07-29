@@ -1,0 +1,1 @@
+//just stops drawing from create event on obj_battle
