@@ -11,10 +11,10 @@ function menu(_x,_y,_options,_description = -1,_width = undefined,_height = unde
 		visible_options_max = _options_count
 	
 		//set up size
-		x_margin = 10
-		y_margin = 8
+		x_margin = 30
+		y_margin = 30
 		draw_set_font(fnt_default)
-		height_line = 12
+		height_line = 30
 		
 		//auto width
 		if (_width == undefined){
