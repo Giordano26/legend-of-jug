@@ -72,3 +72,14 @@ function menu_go_back(){
 	options = options_above[sub_menu_level]
 	hover = 0
 }
+
+
+function menu_select_action(_user, _action){
+	
+	with(obj_menu) active = false
+	
+	with(obj_battle) begin_action(_user,_action,_user)
+	
+	with(obj_menu) instance_destroy()
+	
+}

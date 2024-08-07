@@ -66,6 +66,7 @@
     {"id":{"name":"spr_down_arrow","path":"sprites/spr_down_arrow/spr_down_arrow.yy",},},
     {"id":{"name":"spr_gub_minion","path":"sprites/spr_gub_minion/spr_gub_minion.yy",},},
     {"id":{"name":"spr_player_attack","path":"sprites/spr_player_attack/spr_player_attack.yy",},},
+    {"id":{"name":"spr_player_bullets","path":"sprites/spr_player_bullets/spr_player_bullets.yy",},},
     {"id":{"name":"spr_player_down","path":"sprites/spr_player_down/spr_player_down.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
     {"id":{"name":"spr_pointer","path":"sprites/spr_pointer/spr_pointer.yy",},},

@@ -59,7 +59,7 @@ function battle_change_hp(_target, _amount, _alive_dead_both = 0){
 	var _vertical_adjust = SPRITE_SIZE
 	
 	instance_create_depth(
-	_target.x, //correction here
+	_target.x, 
 	_target.y - _vertical_adjust,
 	_target.depth-1,
 	obj_floating_text,
@@ -72,4 +72,40 @@ function battle_change_hp(_target, _amount, _alive_dead_both = 0){
 	
 	if (!_failed) _target.hp = clamp(_target.hp + _amount, 0, _target.hp_max)
 		
+}
+
+function battle_change_mp(_target,_amount, _alive_dead_both = 0){
+	
+	var _failed = false
+	if(_alive_dead_both == 0) && (_target.hp <= 0){
+		_failed = true
+	}
+	if(_alive_dead_both == 1) && (_target.hp > 0){
+		_failed = true
+	}
+	
+	var _color = c_navy
+	if(_amount > 0){
+		_color = c_teal	
+	}
+	
+	if(_failed){
+		_color = c_white
+		_amount = "failed"
+	}
+	var _vertical_adjust = SPRITE_SIZE
+	
+	instance_create_depth(
+	_target.x, 
+	_target.y - _vertical_adjust,
+	_target.depth-1,
+	obj_floating_text,
+	{
+		font: fnt_floating_text,
+		color: _color,
+		text: string(_amount)
+		
+	})
+	
+	if (!_failed) _target.mp = clamp(_target.mp + _amount, 0, _target.mp_max)
 }

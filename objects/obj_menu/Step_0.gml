@@ -2,6 +2,7 @@
 if (active){
 	var _up_key = keyboard_check_pressed(ord("W"))
 	var _down_key = keyboard_check_pressed(ord("S"))
+	var _select = keyboard_check_pressed(ord("Z"))
 	
 	//control for menu
 	hover += _down_key - _up_key
@@ -16,7 +17,7 @@ if (active){
 	
 	//exec selected option
 	
-	if(keyboard_check_pressed(vk_enter)){
+	if(keyboard_check_pressed(vk_enter) || _select){
 		
 		if(array_length(options[hover]) > 1) && (options[hover][3] == true){ //checking available flag
 		
